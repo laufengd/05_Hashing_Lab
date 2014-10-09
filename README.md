@@ -28,10 +28,10 @@ Questions
 
 #### 2. I decided to use two function (`keyExists` and `find`) to enable lookup of keys. Another option would have been to have `find` return a `T*`, which would be `NULL` if an item with matching key is not found. Which design do you think would be better? Explain your reasoning. You may notice that the designers of C++ made the same decision I did when they designed http://www.cplusplus.com/reference/unordered_map/unordered_map/
 
-	I can see in some circumstances that if 'find()' returned a value of 'NULL', it would be problematic if it were incorporated in another functions.
+	I can see that in some circumstances if 'find()' were to return a value of 'NULL', it would be problematic if it were to be incorporated in another function.
 	However, I find the 'keyExists()' function to be a little redundant because 'calcIndex()' already returns 'numItems' if a key cannot be found. For me, 
-	all my keyExists function does is determine whether 'calcIndex' returns 'numItems'. The only purpose I see is for it is that it makes some of the code more understandable.
+	all my keyExists function does is determine whether 'calcIndex' returns 'numItems'. The only purpose I see for it is that it could make some of the code easier to understand.
 
 #### 3. What is one question that confused you about this exercise, or one piece of advice you would share with students next semester?
 
-I had trouble at first because I didn't exactly know what the 'hash()' function was doing. Once I looked at it and understood what was happening to a key, I found that everything made more sense. 
+I had trouble at first because I didn't exactly know what the 'hash()' function was doing. Once I looked at it and understood what was happening to a key, I found that everything about the other functions made more sense. 
