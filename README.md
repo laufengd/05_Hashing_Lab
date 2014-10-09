@@ -21,15 +21,17 @@ Questions
 
 #### 1. Which of the above requirements work, and which do not? For each requirement, write a brief response.
 
-1. TODO
-2. TODO
-3. TODO
-4. TODO
+1. All functions pass the tests and run in O(1) time.
+2. Add() passes tests and uses linear probing as described in the books
+3. grow() passes tests and is in O(n) time
+4. Destructors were used to prevent memory leaks
 
 #### 2. I decided to use two function (`keyExists` and `find`) to enable lookup of keys. Another option would have been to have `find` return a `T*`, which would be `NULL` if an item with matching key is not found. Which design do you think would be better? Explain your reasoning. You may notice that the designers of C++ made the same decision I did when they designed http://www.cplusplus.com/reference/unordered_map/unordered_map/
 
-TODO
+	I can see in some circumstances that if 'find()' returned a value of 'NULL', it would be problematic if it were incorporated in another functions.
+	However, I find the 'keyExists()' function to be a little redundant because 'calcIndex()' already returns 'numItems' if a key cannot be found. For me, 
+	all my keyExists function does is determine whether 'calcIndex' returns 'numItems'. The only purpose I see is for it is that it makes some of the code more understandable.
 
 #### 3. What is one question that confused you about this exercise, or one piece of advice you would share with students next semester?
 
-TODO
+I had trouble at first because I didn't exactly know what the 'hash()' function was doing. Once I looked at it and understood what was happening to a key, I found that everything made more sense. 
